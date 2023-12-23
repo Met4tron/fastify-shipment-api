@@ -20,6 +20,9 @@ dependencies:
   '@fastify/type-provider-typebox':
     specifier: ^3.5.0
     version: 3.5.0(@sinclair/typebox@0.31.28)
+  '@scalar/fastify-api-reference':
+    specifier: ^1.12.6
+    version: 1.12.6(fastify-html@0.2.0)(fastify-plugin@4.5.1)(fastify@4.25.1)
   cross-env:
     specifier: ^7.0.3
     version: 7.0.3
@@ -637,6 +640,19 @@ packages:
     dev: true
     optional: true
 
+  /@scalar/fastify-api-reference@1.12.6(fastify-html@0.2.0)(fastify-plugin@4.5.1)(fastify@4.25.1):
+    resolution: {integrity: sha512-JY2oKPBVlehrGSOaENmxvUYe6qnPf+f1qFz5HzJt3AOMqzgpvwVY6SZoimXN2Vo5SKpPYQxa1o69ZWH1LQHnJA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      fastify: ^4.0.0
+      fastify-html: ^0.2.0
+      fastify-plugin: ^4.0.0
+    dependencies:
+      fastify: 4.25.1
+      fastify-html: 0.2.0
+      fastify-plugin: 4.5.1
+    dev: false
+
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
@@ -1186,6 +1202,11 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
+  /common-tags@1.8.2:
+    resolution: {integrity: sha512-gk/Z852D2Wtb//0I+kRFNKKE9dIIVirjoqPoA1wJU+XePVXZfGeBpk45+A1rKO4Q43prqWBNY/MiIeRLbPWUaA==}
+    engines: {node: '>=4.0.0'}
+    dev: false
+
   /compress-commons@4.1.2:
     resolution: {integrity: sha512-D3uMHtGc/fcO1Gt1/L7i1e33VOvD4A9hfQLP+6ewd+BvG/gQ84Yh4oftEhAdjSMgBgwGL+jsppT7JYNpo6MHHg==}
     engines: {node: '>= 10'}
@@ -1473,6 +1494,13 @@ packages:
     dependencies:
       fastify-plugin: 4.5.1
       fastparallel: 2.4.1
+    dev: false
+
+  /fastify-html@0.2.0:
+    resolution: {integrity: sha512-P2zwpFnAUcxfzHbkcGtuKRwv2Y2lPGXfySRScnZHax0JfR8WL2YIzPW/xUdU+oexOQAsR29aQyeBmmSbwXRkRg==}
+    dependencies:
+      common-tags: 1.8.2
+      fastify-plugin: 4.5.1
     dev: false
 
   /fastify-plugin@4.5.1:
