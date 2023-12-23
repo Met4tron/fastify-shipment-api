@@ -4,7 +4,7 @@ import pg from 'pg'
 import { Kysely, Migrator, PostgresDialect, FileMigrationProvider } from 'kysely'
 import { run } from 'kysely-migration-cli'
 
-const migrationFolder = new URL('../db/migrations', import.meta.url).pathname
+const migrationFolder = new URL('../src/infra/database/migrations', import.meta.url).pathname
 
 // biome-ignore lint/suspicious/noExplicitAny: migration schema details
 const  db = new Kysely<any>({

@@ -33,13 +33,16 @@ app.register(fastifySwagger, {
       },
       version: '1.0.0',
     },
-    servers: [{
-      url: 'http://localhost:3000',
-      description: 'Development'
-    }, {
-      url: 'http://localhost:3000',
-      description: 'Production'
-    }]
+    servers: [
+      {
+        url: 'http://localhost:3000',
+        description: 'Development',
+      },
+      {
+        url: 'http://localhost:3000',
+        description: 'Production',
+      },
+    ],
   },
 });
 app.register(fastifyScalarSwagger, {
