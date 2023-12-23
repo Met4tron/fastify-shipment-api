@@ -7,9 +7,9 @@ export default defineConfig({
     reporters: ['verbose'],
     exclude: [...configDefaults.exclude],
     alias: {
-      '@modules': path.resolve(__dirname, './src/modules'),
-      '@infra': path.resolve(__dirname, './src/infra'),
-      '@config': path.resolve(__dirname, './src/config'),
+      '~modules': path.resolve(__dirname, './src/modules'),
+      '~infra': path.resolve(__dirname, './src/infra'),
+      '~config': path.resolve(__dirname, './src/config'),
     },
     globals: true,
   },

@@ -9,9 +9,9 @@ export default mergeConfig(
       exclude: [...configDefaults.exclude, '**/*.{test,spec}.?(c|m)[jt]s?(x)'],
       include: ['./test/**/*.e2e.ts'],
       alias: {
-        '@modules': path.resolve(__dirname, './src/modules'),
-        '@infra': path.resolve(__dirname, './src/infra'),
-        '@config': path.resolve(__dirname, './src/config'),
+        '~modules': path.resolve(__dirname, './src/modules'),
+        '~infra': path.resolve(__dirname, './src/infra'),
+        '~config': path.resolve(__dirname, './src/config'),
       },
       globals: true,
       environment: 'node',
