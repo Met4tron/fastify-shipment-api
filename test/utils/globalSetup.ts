@@ -22,7 +22,7 @@ export default async function () {
   process.env.DB_PORT = pgContainer.getFirstMappedPort().toString();
   process.env.DATABASE_URL = `postgres://test:test@${pgContainer.getHost()}:${pgContainer.getFirstMappedPort()}/test?sslmode=disable`;
 
-  execSync('dbmate up');
+  execSync('pnpm run migrate');
 
   return async () => {
     if (teardown) {

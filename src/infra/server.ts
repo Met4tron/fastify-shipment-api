@@ -1,15 +1,16 @@
 import { config } from '~config/environment';
-import app from './app';
+import { setupServer } from './app';
 
 async function bootstrap() {
+  const server = setupServer();
   try {
-    await app.ready();
-    await app.listen({
+    await server.ready();
+    await server.listen({
       host: '0.0.0.0',
       port: config.api.port,
     });
   } catch (e) {
-    app.log.error(e);
+    server.log.error(e);
   }
 }
 bootstrap();

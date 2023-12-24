@@ -7,7 +7,7 @@ export default mergeConfig(
   defineConfig({
     test: {
       exclude: [...configDefaults.exclude, '**/*.{test,spec}.?(c|m)[jt]s?(x)'],
-      include: ['./test/**/*.e2e.ts'],
+      include: ['./test/e2e/**/*.e2e.ts'],
       alias: {
         '~modules': path.resolve(__dirname, './src/modules'),
         '~infra': path.resolve(__dirname, './src/infra'),
@@ -17,7 +17,6 @@ export default mergeConfig(
       environment: 'node',
       globalSetup: ['./test/utils/globalSetup'],
       env: {
-        DB_PORT: '5432',
         DB_USER: 'test',
         DB_PASSWORD: 'test',
         DB_DATABASE: 'test',
